@@ -34,5 +34,12 @@ class UsuarioController extends Controller
         return response()->json(['success' => true, 'message' => $mensaje], 201);
     }
 
-    // Otros métodos del controlador, como el método login, pueden ir aquí
+    public function list()
+    {
+        // Obtener todos los usuarios
+        $usuarios = Usuario::all();
+
+        // Retornar la lista de usuarios en formato JSON
+        return response()->json(['usuarios' => $usuarios], 200);
+    }
 }

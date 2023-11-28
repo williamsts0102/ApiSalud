@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Rutas para UsuarioController
 Route::post('register', [UsuarioController::class, 'register']);
+Route::get('listUsers', [UsuarioController::class, 'list']);
 
 // Rutas para MedicamentoController
 Route::get('listMedicamentos', [MedicamentoController::class, 'list']);
